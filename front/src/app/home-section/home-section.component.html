@@ -1,0 +1,53 @@
+<div #asHome class="col wrapper section-block border-white-bottom">
+  <div class="row m-0">
+    <div class="in-wrapper col-12 col-xs-12 col-md-12 col-lg-6">
+      <h4 class="sub-title decorator spacer animate__animated animate__fadeInDown animation-3">¿Cómo te parece el contenido del canal de Youtube?</h4>
+      <div class="wrapper-title">
+        <h1 class="title animate__animated animate__fadeInDown animation-5">Dame tú <br>opinión</h1>
+        <div data-micron="tada" (click)="move(true)" class="btn-cta pointer">
+          <i class="uil uil-arrow-down-right"></i>
+        </div>
+      </div>
+    </div>
+
+<!--    <div class="col-12 col-xs-12 col-md-12 col-lg-6 text-center">-->
+<!--      <div class="avatar-mock">-->
+
+<!--      </div>-->
+<!--    </div>-->
+
+    <div class="col-12 col-xs-12 col-md-12 col-lg-6">
+      <div class="row">
+        <div (click)="cbShowCase()" class="pointer  col-12 animate__animated animate__fadeInDown animation-3">
+          <h4 class="sub-title decorator spacer ">¿Cuales son los premios?</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, mollitia.
+          </p>
+          <div *ngIf="showCase">
+            <ul class="list-not row">
+              <li class="list-item col-3 gift-wrapper  animate__animated animate__fadeInDown animation-{{i}}" *ngFor="let a of [1,1,1];let i = index">
+                <div class="gift">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/51OhYqp9zFL.jpg" alt="">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-6 animate__animated animate__fadeInDown animation-4">
+          <h4 class="sub-title decorator spacer">¿Como participo?</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, mollitia.
+          </p>
+        </div>
+        <div class="col-6 animate__animated animate__fadeInDown animation-5">
+          <h4 class="sub-title decorator spacer">¿Hasta cuando es valido?</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, mollitia.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

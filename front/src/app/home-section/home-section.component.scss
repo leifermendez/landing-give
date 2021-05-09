@@ -1,0 +1,66 @@
+@import "src/shared";
+
+:host {
+  display: block;
+  z-index: 0;
+  position: relative;
+  transition: all ease 250ms;
+}
+
+.avatar-square{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.wrapper-title{
+  display: flex;
+  align-items: flex-end;
+}
+
+.btn-cta{
+  background-color: $textColor;
+  margin: 1rem;
+  padding: 1rem;
+  color: $mainColor;
+  font-size: 2rem;
+  .uil{
+    pointer-events: none;
+  }
+}
+
+.avatar-mock{
+  background-image: url("https://avatars.githubusercontent.com/u/15802366?v=4");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+}
+
+.list-not {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.gift-wrapper{
+  background-color: white;
+  border-right: solid 2px #1a1a1a;
+  .gift{
+
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 1rem;
+    img{
+      width: 100px;
+    }
+
+  }
+
+}
+

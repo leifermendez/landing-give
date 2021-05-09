@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e730e62b-af85-450b-81b7-1042a733dd5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/front/src/shared.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/styles.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sIBLAsox5DbdhHPoFR1Cjh7hXP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="C:\Users\Leifer\Documents\youtube-videos\giveaway\front\node_modules\typescript\lib" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="cd fr" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/front/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e730e62b-af85-450b-81b7-1042a733dd5f" name="Default Changelist" comment="" />
+      <created>1620550164576</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620550164576</updated>
+      <workItem from="1620550166836" duration="14165000" />
+      <workItem from="1620576452260" duration="7246000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1899" height="264" key="GridCell.Tab.0.bottom" timestamp="1620577636170">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="264" key="GridCell.Tab.0.bottom/0.30.1920.1050/-1920.30.1920.1050@0.30.1920.1050" timestamp="1620577636170" />
+    <state width="1899" height="264" key="GridCell.Tab.0.center" timestamp="1620577636170">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="264" key="GridCell.Tab.0.center/0.30.1920.1050/-1920.30.1920.1050@0.30.1920.1050" timestamp="1620577636170" />
+    <state width="1899" height="264" key="GridCell.Tab.0.left" timestamp="1620577636170">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="264" key="GridCell.Tab.0.left/0.30.1920.1050/-1920.30.1920.1050@0.30.1920.1050" timestamp="1620577636170" />
+    <state width="1899" height="264" key="GridCell.Tab.0.right" timestamp="1620577636170">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="264" key="GridCell.Tab.0.right/0.30.1920.1050/-1920.30.1920.1050@0.30.1920.1050" timestamp="1620577636170" />
+    <state x="461" y="198" key="SettingsEditor" timestamp="1620563890399">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="461" y="198" key="SettingsEditor/0.30.1920.1050/-1920.30.1920.1050@0.30.1920.1050" timestamp="1620563890399" />
+    <state x="646" y="271" width="758" height="568" key="find.popup" timestamp="1620581505903">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="646" y="271" width="758" height="568" key="find.popup/0.30.1920.1050/-1920.30.1920.1050@0.30.1920.1050" timestamp="1620581505903" />
+    <state x="616" y="258" key="run.anything.popup" timestamp="1620550172553">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="616" y="258" key="run.anything.popup/0.30.1920.1050/-1920.30.1920.1050@0.30.1920.1050" timestamp="1620550172553" />
+  </component>
+</project>
