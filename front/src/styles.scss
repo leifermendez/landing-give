@@ -62,6 +62,33 @@ body, head {
   margin: 0 !important;
 }
 
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+
+.pulse {
+  .social-btn {
+    animation: pulse-animation .8s 10;
+  }
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(239, 239, 239, 1);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+  }
+}
 
 .video-player {
   position: relative;
@@ -96,11 +123,26 @@ body, head {
   }
 
   iframe {
+    transition: all ease 250ms;
     width: 50%;
     height: 55%;
     position: fixed;
     box-shadow: 0 0 20px 20px #00000040;
     background-color: black;
+  }
+}
+
+.wrapper-video-player-fixed {
+
+  .in-wrapper-video-player {
+
+    iframe {
+      transition: all ease 250ms;
+      width: 25%;
+      height: 27%;
+      right: 1rem;
+      bottom: 1rem;
+    }
   }
 }
 
@@ -119,7 +161,7 @@ p {
   letter-spacing: .5px;
 }
 
-.pointer{
+.pointer {
   cursor: pointer;
 }
 
@@ -154,7 +196,8 @@ p {
     content: '';
     pointer-events: none;
     position: absolute;
-    width: 0; height: 0;
+    width: 0;
+    height: 0;
 
     #{$vertical}: 0;
     #{$horizontal}: 0;
@@ -185,15 +228,20 @@ p {
       height: 100%;
     }
 
-    &::before { transition-delay: 0s, 0s, $duration; }
+    &::before {
+      transition-delay: 0s, 0s, $duration;
+    }
 
-    &::after { transition-delay: 0s, $duration, 0s; }
+    &::after {
+      transition-delay: 0s, $duration, 0s;
+    }
   }
 }
 
 .draw-border {
   @include btn-border-drawing(rgba(107, 216, 255, 0.2), #ffffff, 2px, bottom, right);
-  &.not-line{
+
+  &.not-line {
     @include btn-border-drawing($textColor, #ffffff, 2px, bottom, right);
   }
 }

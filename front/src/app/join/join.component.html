@@ -1,8 +1,8 @@
-<div #asJoin class="wrapper-join">
-  <button class="social-btn btn draw-border fb-btn animate__animated animate__fadeInDown animation-7"
-          *ngFor="let a of [1]">
-    <span class="icon-block"><i class="uil uil-facebook-f"></i></span>
-    <span class="text">Conectar Facebook</span>
+<div #asJoin class="wrapper-join ">
+  <button class="social-btn btn draw-border {{a?.class}} animate__animated animate__fadeInDown animation-7"
+          *ngFor="let a of menuSteps">
+    <span class="icon-block" [innerHTML]="a.icon"></span>
+    <span class="text">{{a.label}}</span>
   </button>
 
   <button class="social-btn btn draw-border avatar-mock animate__animated animate__fadeInDown animation-8"
@@ -23,15 +23,15 @@
 
 </div>
 
-<div #asVideo class="wrapper-video-player hide-video">
-<!--  <div class="in-wrapper-video-player">-->
-<!--    <div class="close pointer" (click)="move(false);closeVideo()">Cerrar <i class="uil uil-times"></i></div>-->
-<!--    <youtube-player (stateChange)="test($event)" (ready)="setPlayer($event)" [playerVars]="playerVars"-->
-<!--                    [className]="'video-player'" videoId="xrRP4myIvR0"></youtube-player>-->
-<!--  </div>-->
+<div #asVideo class="wrapper-video-player hide-video {{(steps.includes('STEP_2')) ? 'wrapper-video-player-fixed' : ''}}">
+  <div class="in-wrapper-video-player">
+    <div class="close pointer" (click)="move(false);closeVideo()">Cerrar <i class="uil uil-times"></i></div>
+    <youtube-player (stateChange)="test($event)" (ready)="setPlayer($event)" [playerVars]="playerVars"
+                    [className]="'video-player'" videoId="xrRP4myIvR0"></youtube-player>
+  </div>
 
-  <div class="wrapper-fb">
-    <fb-post class="in-wrapper-fb" href="https://www.facebook.com/leifermendez.dev/posts/128537982641841"></fb-post>
+  <div class="wrapper-fb" [ngClass]="{'d-flex':(steps.includes('STEP_2')), 'd-none':(!steps.includes('STEP_2'))}">
+    <fb-post class="in-wrapper-fb" href="https://www.facebook.com/leifermendez.dev/posts/128387119323594"></fb-post>
   </div>
 
 </div>

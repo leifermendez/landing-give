@@ -14,6 +14,9 @@ export class JoinComponent implements OnInit {
   private apiLoaded = false;
   playerVars: any;
   player: YT.Player;
+  steps: Array<string> = [];
+  secondsCounter = 0;
+  menuSteps: Array<any> = []
 
   constructor(private utilService: UtilService, private renderer2: Renderer2, private fb: FacebookService) {
     const initParams: InitParams = {
@@ -26,6 +29,20 @@ export class JoinComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.steps = ['STEP_1'];
+    this.menuSteps = [
+      {
+        icon: '<i class="uil uil-facebook-f"></i>',
+        label: 'Conectar Facebook',
+        class: 'fb-btn btn-step-1'
+      },
+      {
+        icon: '<i class="uil uil-comments-alt"></i>',
+        label: 'Comentar Post',
+        class: 'fb-btn-second btn-step-2'
+      }
+    ]
+
     this.utilService.cbAction.subscribe(res => {
       this.initAnimate();
       this.player.playVideo();
@@ -78,6 +95,29 @@ export class JoinComponent implements OnInit {
   }
 
   test($event: YT.OnStateChangeEvent): void {
+    const {data} = $event;
+    if (data === 3) {
+      this.getDuration();
+    }
     console.log($event);
+
+  }
+
+  setPulse(name): void {
+    const element = document.querySelector(name);
+  }
+
+  getDuration(): void {
+    const seconds = this.player.getDuration();
+    const flagCount = setInterval(() => {
+      this.secondsCounter += 1;
+      if (this.secondsCounter === 6) {
+        // this.steps.push('STEP_2');
+        console.log(this.steps)
+        this.renderer2.addClass(this.asJoin, 'pulse')
+        clearInterval(flagCount)
+      }
+      console.log(this.secondsCounter)
+    }, 1000);
   }
 }

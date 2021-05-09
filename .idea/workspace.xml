@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e730e62b-af85-450b-81b7-1042a733dd5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/front/src/shared.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1620550164576</updated>
       <workItem from="1620550166836" duration="14165000" />
-      <workItem from="1620576452260" duration="7246000" />
+      <workItem from="1620576452260" duration="11639000" />
     </task>
     <servers />
   </component>
@@ -107,10 +99,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1899" height="264" key="GridCell.Tab.0.right/0.30.1920.1050/-1920.30.1920.1050@0.30.1920.1050" timestamp="1620577636170" />
-    <state x="461" y="198" key="SettingsEditor" timestamp="1620563890399">
+    <state x="461" y="198" key="SettingsEditor" timestamp="1620587294371">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="461" y="198" key="SettingsEditor/0.30.1920.1050/-1920.30.1920.1050@0.30.1920.1050" timestamp="1620563890399" />
+    <state x="461" y="198" key="SettingsEditor/0.30.1920.1050/-1920.30.1920.1050@0.30.1920.1050" timestamp="1620587294371" />
     <state x="646" y="271" width="758" height="568" key="find.popup" timestamp="1620581505903">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>

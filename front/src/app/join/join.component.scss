@@ -7,6 +7,15 @@
   transition: all ease 250ms;
 }
 
+::ng-deep{
+  .social-btn{
+    .uil {
+      font-size: 2rem;
+    }
+  }
+
+}
+
 .wrapper-join {
   background-color: transparent;
   width: 100%;
@@ -25,7 +34,7 @@
   border: 0;
   padding: 0;
   font-size: 1.2rem;
-  color: white;
+  color: $mainColor;
   font-weight: 500;
   cursor: pointer;
   height: 10rem;
@@ -60,12 +69,14 @@
     }
   }
 
-  .uil {
-    font-size: 2rem;
-  }
 
   &.fb-btn {
     background-color: #3769d0;
+    color: $textColor;
+  }
+  &.fb-btn-second {
+    background-color: #3769d0;
+    color: $textColor;
   }
 }
 
@@ -78,6 +89,8 @@
   height: 10rem;
   width: 10rem;
 }
+
+
 
 .wrapper-video-player {
   position: fixed;
@@ -93,12 +106,13 @@
 }
 
 
-.wrapper-fb{
+.wrapper-fb {
   //background-color: red;
   width: 100%;
   display: flex;
   justify-content: center;
-  .in-wrapper-fb{
+
+  .in-wrapper-fb {
     background-color: $textColor;
     box-shadow: 0 0 20px 3px black;
   }
