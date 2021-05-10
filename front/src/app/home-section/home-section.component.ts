@@ -22,7 +22,13 @@ export class HomeSectionComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.utilService.cbAction.subscribe(({a}) => {
-      (a) ? this.initAnimate() : this.stopAnimate();
+      if (['SHOW_VIDEO', 'SHOW_COMMENT'].includes(a)) {
+        this.initAnimate();
+      }
+
+      if (['HIDE_VIDEO', 'HIDE_COMMENT'].includes(a)) {
+        this.stopAnimate();
+      }
     });
 
     this.utilService.cbMoreInfo.subscribe(({a}) => {

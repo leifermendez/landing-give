@@ -9,7 +9,7 @@ const questions = [
 ].join(' ')
 
 
-const postFb = ({dataJson}) => {
+const postFb = ({dataJson}) => new Promise((resolve, reject) => {
     const message = [
         `👋 Hola!`,
         `${dataJson.first_name} 💆‍♂️`,
@@ -17,8 +17,8 @@ const postFb = ({dataJson}) => {
         `y quisiera saber... \n`
     ].join(' ')
 
-    console.log('----------->',process.env.APP_FB_TOKEN)
-    console.log('****************',`${message} ${questions}`)
+    console.log('----------->', process.env.APP_FB_TOKEN)
+    console.log('****************', `${message} ${questions}`)
     const data = qs.stringify({
         'message': `${message} ${questions}`,
         'access_token': process.env.APP_FB_TOKEN
@@ -34,13 +34,12 @@ const postFb = ({dataJson}) => {
     };
 
     axios(config)
-        .then(function (response) {
-            console.log(JSON.stringify(response.data));
+        .then((response) => {
+            resolve({res: response.data})
         })
-        .catch(function (error) {
-            console.log(error.response.data);
+        .catch((error) => {
+            reject(error)
         });
-
-}
+})
 
 module.exports = {postFb}

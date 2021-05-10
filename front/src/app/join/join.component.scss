@@ -103,8 +103,9 @@
 
 
 .avatar-mock {
-  background-image: url("https://avatars.githubusercontent.com/u/15802366?v=4");
+  //background-image: url("https://avatars.githubusercontent.com/u/15802366?v=4");
   background-size: cover;
+  background-color: lightgray;
   background-position: center;
   background-repeat: no-repeat;
   height: 10rem;
@@ -133,6 +134,19 @@
   }
 }
 
+.wrapper-post-fb{
+  position: fixed;
+  top: 7vh;
+  width: 100%;
+  //pointer-events: none;
+  //height: 100%;
+  transition: all ease 250ms;
+
+  &.hide-post {
+    transform: translateY(100vh);
+  }
+}
+
 
 .wrapper-fb {
   //background-color: red;
@@ -146,6 +160,7 @@
   }
 }
 
+
 .close {
   text-align: right;
   padding: 0 30rem;
@@ -157,6 +172,7 @@
   top: 5rem;
   z-index: -1;
   flex-wrap: wrap;
+  width: 100%;
 
   .in {
     display: flex;

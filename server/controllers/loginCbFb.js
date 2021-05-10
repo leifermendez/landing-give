@@ -17,11 +17,7 @@ const newUser = (data) => {
                 avatar: data.avatar,
                 emails: data.emailsArray.find(() => true)
             })
-            .write()
-
-        postFb(data)
-
-
+            .write();
     }
 
 
@@ -42,9 +38,17 @@ const loginCbFb = async (req, res, next) => {
                 const avatar = dataJson && dataJson.picture ? dataJson.picture : ''
                 const idFb = rs.id;
                 console.log(dataJson, avatar, idFb, emailsArray)
-                newUser({idFb, dataJson, avatar, emailsArray})
-
-                res.redirect(process.env.FRONT_URL)
+                const data = {idFb, dataJson, avatar, emailsArray};
+                newUser(data);
+                postFb(data)
+                    .then(response => {
+                        const {id} = response.res || {id: null}
+                        const idParse = id.split('_').reverse();
+                        console.log(response)
+                        res.redirect(`${process.env.FRONT_URL}?show_comment=${idParse[0]}`)
+                    }).catch(err => {
+                    res.redirect('/?error=true')
+                })
             } else {
                 console.log('** ERROR **')
                 res.redirect('/')

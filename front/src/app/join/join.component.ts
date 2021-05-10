@@ -1,25 +1,50 @@
-import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {
+  AfterContentInit,
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  OnInit,
+  Renderer2,
+  ViewChild
+} from '@angular/core';
 import {UtilService} from '../util.service';
 import {FacebookService, InitParams} from "ngx-facebook";
 import {environment} from "../../environments/environment";
+import {ApiRestService} from "../api-rest.service";
+import {ActivatedRoute} from "@angular/router";
+
+declare var window: any;
+declare var FB: any;
 
 @Component({
   selector: 'app-join',
   templateUrl: './join.component.html',
-  styleUrls: ['./join.component.scss']
+  styleUrls: ['./join.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class JoinComponent implements OnInit {
+
+
+export class JoinComponent implements OnInit, AfterViewInit, AfterContentInit {
   @ViewChild('asJoin') asJoin: ElementRef;
   @ViewChild('asVideo') asVideo: ElementRef;
   @ViewChild('asComments') asComments: ElementRef;
+  @ViewChild('asCommentFb') asCommentFb: ElementRef;
   private apiLoaded = false;
   playerVars: any;
   player: YT.Player;
   steps: Array<string> = [];
-  secondsCounter = 0;
+  showComment: any = false;
   menuSteps: Array<any> = []
+  participants: Array<any> = [];
+  urlComment = `130456915783281`
 
-  constructor(private utilService: UtilService, private renderer2: Renderer2, private fb: FacebookService) {
+  constructor(private utilService: UtilService, private renderer2: Renderer2, private fb: FacebookService,
+              private apiRestService: ApiRestService, private route: ActivatedRoute) {
+
+    this.showComment = this.route.snapshot.queryParamMap.get('show_comment');
+    console.log('*^**', this.showComment)
+
     const initParams: InitParams = {
       appId: '2832050400453938',
       xfbml: true,
@@ -29,7 +54,22 @@ export class JoinComponent implements OnInit {
     fb.init(initParams);
   }
 
+  ngAfterViewInit(): void {
+    if (this.showComment && !isNaN(this.showComment)) {
+      setTimeout(() => {
+        // @ts-ignore
+        // FB.XFBML.parse();
+        // window.FB.XFBML.parse();
+        this.utilService.cbAction.emit({a: 'SHOW_COMMENT'});
+        // this.urlComment += this.showComment;
+        console.log('-->', this.urlComment);
+      }, 0)
+    }
+  }
+
   ngOnInit(): void {
+    // @ts-ignore
+
     this.steps = ['STEP_1'];
     this.menuSteps = [
       {
@@ -40,9 +80,26 @@ export class JoinComponent implements OnInit {
       }
     ]
 
-    this.utilService.cbAction.subscribe(res => {
-      this.initAnimate();
-      this.player.playVideo();
+    this.utilService.cbAction.subscribe(({a}) => {
+      console.log(a)
+      if (a === 'SHOW_VIDEO') {
+        this.initAnimateVideo();
+        this.player.playVideo();
+        return;
+      }
+
+      if (a === 'SHOW_COMMENT') {
+        this.initAnimateComment();
+        // this.player.playVideo();
+        return;
+      }
+
+      if (a === 'HIDE_VIDEO') {
+        this.stopAnimateVideo();
+        this.closeVideo();
+        return;
+      }
+
     });
 
     this.playerVars = {
@@ -54,7 +111,7 @@ export class JoinComponent implements OnInit {
       cc_lang_pref: 'es',
       iv_load_policy: 3
     };
-
+    this.loadParticipants();
     if (!this.apiLoaded) {
       // This code loads the IFrame Player API code asynchronously, according to the instructions at
       // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
@@ -65,13 +122,24 @@ export class JoinComponent implements OnInit {
     }
   }
 
-  initAnimate(): void {
+  loadParticipants(): void {
+    this.apiRestService.getParticipants()
+      .subscribe(({data}) => this.participants = data)
+  }
+
+  initAnimateComment(): void {
+    this.renderer2.addClass(this.asJoin.nativeElement, 'translate-bottom');
+    this.renderer2.addClass(this.asComments.nativeElement, 'translate-bottom');
+    this.renderer2.removeClass(this.asCommentFb.nativeElement, 'hide-post');
+  }
+
+  initAnimateVideo(): void {
     this.renderer2.addClass(this.asJoin.nativeElement, 'translate-bottom');
     this.renderer2.addClass(this.asComments.nativeElement, 'translate-bottom');
     this.renderer2.removeClass(this.asVideo.nativeElement, 'hide-video');
   }
 
-  stopAnimate(): void {
+  stopAnimateVideo(): void {
     this.renderer2.removeClass(this.asJoin.nativeElement, 'translate-bottom');
     this.renderer2.removeClass(this.asComments.nativeElement, 'translate-bottom');
     this.renderer2.addClass(this.asVideo.nativeElement, 'hide-video');
@@ -88,7 +156,6 @@ export class JoinComponent implements OnInit {
 
   closeVideo(): void {
     this.player.pauseVideo();
-    this.stopAnimate();
   }
 
   test($event: YT.OnStateChangeEvent): void {
@@ -116,5 +183,8 @@ export class JoinComponent implements OnInit {
     //   }
     //   console.log(this.secondsCounter)
     // }, 1000);
+  }
+
+  ngAfterContentInit(): void {
   }
 }
