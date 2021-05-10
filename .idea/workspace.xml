@@ -2,6 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e730e62b-af85-450b-81b7-1042a733dd5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controllers/ loginCbFb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controllers/loginFb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/services/dbHandler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/services/exchangeToken.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/services/oauth.facebook.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/services/postFanPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +89,7 @@
       <workItem from="1620550166836" duration="14165000" />
       <workItem from="1620576452260" duration="11674000" />
       <workItem from="1620629317602" duration="66000" />
-      <workItem from="1620629547937" duration="12977000" />
+      <workItem from="1620629547937" duration="24188000" />
     </task>
     <servers />
   </component>
@@ -85,6 +97,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="710" y="346" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1620643221851">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="710" y="346" key="#com.intellij.fileTypes.FileTypeChooser/0.30.1920.1050/-1920.30.1920.1050@0.30.1920.1050" timestamp="1620643221851" />
     <state width="1899" height="264" key="GridCell.Tab.0.bottom" timestamp="1620634997214">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>

@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {UtilService} from '../util.service';
 import {FacebookService, InitParams} from "ngx-facebook";
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-join',
@@ -34,7 +35,8 @@ export class JoinComponent implements OnInit {
       {
         icon: '<i class="uil uil-facebook-f"></i>',
         label: 'Conectar Facebook',
-        class: 'fb-btn btn-step-1'
+        class: 'fb-btn btn-step-1',
+        href: `${environment.api}/login-facebook`
       }
     ]
 
