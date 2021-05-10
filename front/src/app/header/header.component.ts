@@ -24,22 +24,22 @@ export class HeaderComponent implements OnInit {
       {
         icon: '<i class="uil uil-youtube"></i>',
         name: 'Youtube',
-        link: 'youtube.com/leifermendez'
-      },
-      {
-        icon: '<i class="uil uil-linkedin"></i>',
-        name: 'Linkedin',
-        link: 'github.com/leifermendez'
+        link: '//www.youtube.com/channel/UCgrIGp5QAnC0J8LfNJxDRDw?sub_confirmation=1'
       },
       {
         icon: '<i class="uil uil-facebook"></i>',
         name: 'Facebook',
-        link: 'facebook.com/leifermendez.dev'
+        link: '//facebook.com/leifermendez.dev'
+      },
+      {
+        icon: '<i class="uil uil-linkedin"></i>',
+        name: 'Linkedin',
+        link: '//www.linkedin.com/in/leifermendez/'
       },
       {
         icon: '<i class="uil uil-github"></i>',
         name: 'Github',
-        link: 'github.com/leifermendez'
+        link: '//github.com/leifermendez'
       }
     ]
   }

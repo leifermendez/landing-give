@@ -11,7 +11,7 @@ body, head {
 }
 
 .wrapper {
-  padding: 0 13rem;
+  padding: 0 5rem;
   transition: all ease 250ms;
 
   .in-wrapper {
@@ -28,8 +28,10 @@ body, head {
 
 .title {
   font-weight: 600;
-  font-size: 6rem;
-  margin: 0
+  font-size: 5rem;
+  margin: 0;
+  word-break: break-word;
+
 }
 
 .sub-title {
@@ -43,8 +45,8 @@ body, head {
 .decorator {
   position: relative;
   padding-left: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
 
   &:before {
     content: " ";
@@ -76,9 +78,7 @@ body, head {
 
 
 .pulse {
-  .social-btn {
-    animation: pulse-animation .8s 10;
-  }
+  animation: pulse-animation .8s 8;
 }
 
 @keyframes pulse-animation {
@@ -247,3 +247,32 @@ p {
 }
 
 
+@media screen and (max-width: 768px) {
+
+  .close{
+    padding: 0 !important;
+  }
+
+  .wrapper {
+    padding: 0;
+
+    &.section-block {
+      padding: 0 0 2rem;
+    }
+  }
+
+  .video-player {
+    iframe {
+      width: 85%;
+      height: 85%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 368px) {
+
+  .title {
+    font-size: 4rem;
+  }
+}

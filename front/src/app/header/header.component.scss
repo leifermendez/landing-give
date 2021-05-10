@@ -22,6 +22,10 @@
     text-transform: uppercase;
     font-size: .85rem;
     font-weight: 400;
+    a{
+      text-decoration: none;
+      color: white;
+    }
     span {
       padding: 0 .25rem;
     }
@@ -42,4 +46,16 @@
   height: 30px;
   object-fit: cover;
   border-radius: 5rem;
+}
+
+
+@media screen and (max-width: 450px) {
+  .list-not{
+    .item-menu{
+      font-size: 1.1rem;
+      .text{
+        display: none;
+      }
+    }
+  }
 }

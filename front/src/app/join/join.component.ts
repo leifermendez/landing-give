@@ -109,15 +109,15 @@ export class JoinComponent implements OnInit {
 
   getDuration(): void {
     const seconds = this.player.getDuration();
-    const flagCount = setInterval(() => {
-      this.secondsCounter += 1;
-      if (this.secondsCounter === 6) {
-        // this.steps.push('STEP_2');
-        console.log(this.steps)
-        this.renderer2.addClass(this.asJoin, 'pulse')
-        clearInterval(flagCount)
-      }
-      console.log(this.secondsCounter)
-    }, 1000);
+    // const flagCount = setInterval(() => {
+    //   this.secondsCounter += 1;
+    //   if (this.secondsCounter === 6) {
+    //     // this.steps.push('STEP_2');
+    //     console.log(this.steps)
+    //     this.renderer2.addClass(this.asJoin, 'pulse')
+    //     clearInterval(flagCount)
+    //   }
+    //   console.log(this.secondsCounter)
+    // }, 1000);
   }
 }

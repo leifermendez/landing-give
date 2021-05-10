@@ -1,13 +1,19 @@
 <div #asHome class="col wrapper section-block border-white-bottom">
   <div class="row m-0">
     <div class="in-wrapper col-12 col-xs-12 col-md-12 col-lg-6">
-      <h4 class="sub-title decorator spacer animate__animated animate__fadeInDown animation-3">¿Cómo te parece el contenido del canal de Youtube?</h4>
+      <h4  class="sub-title decorator spacer animate__animated animate__fadeInDown animation-3">A simple syntax makes it easy</h4>
       <div class="wrapper-title">
-        <h1 class="title animate__animated animate__fadeInDown animation-5">Dime tú <br>opinión</h1>
-        <div data-micron="tada" (click)="move(true)" class="btn-cta pointer">
+        <h1 #asTitle class="title animate__animated animate__fadeInDown animation-5"></h1>
+        <div data-micron="tada" (click)="move(true)" class="btn-cta pointer pulse">
           <i class="uil uil-arrow-down-right"></i>
         </div>
       </div>
+    </div>
+
+    <div class="in-wrapper mobile-section col-12 col-xs-12 col-md-12 col-lg-6 ">
+        <button class="social-btn fb-btn {{a.class}}" *ngFor="let a of menuSteps">
+          <span [innerHTML]="a.icon"></span>
+        </button>
     </div>
 
 <!--    <div class="col-12 col-xs-12 col-md-12 col-lg-6 text-center">-->

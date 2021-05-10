@@ -1,14 +1,24 @@
 <div #asJoin class="wrapper-join ">
-  <button class="social-btn btn draw-border {{a?.class}} animate__animated animate__fadeInDown animation-7"
-          *ngFor="let a of menuSteps">
-    <span class="icon-block" [innerHTML]="a.icon"></span>
-    <span class="text">{{a.label}}</span>
-  </button>
+  <div  *ngFor="let a of menuSteps;let i = index">
+    <button class="social-btn btn draw-border {{a?.class}} animate__animated animate__fadeInDown animation-7">
+      <span class="icon-block" [innerHTML]="a.icon"></span>
+      <span class="text">{{a.label}}</span>
+    </button>
+    <div class="step animate__animated animate__fadeInDown animation-8">
+      <span>Paso <b>{{i+1}}</b></span>
+    </div>
+  </div>
 
-  <button class="social-btn btn draw-border avatar-mock animate__animated animate__fadeInDown animation-8"
-          (click)="move(true)">
-    <span class="icon-block icon-play"><i class="uil uil-youtube"></i></span>
-  </button>
+
+ <div>
+   <button class="social-btn btn draw-border avatar-mock animate__animated animate__fadeInDown animation-8"
+           (click)="move(true)">
+     <span class="icon-block icon-play"><i class="uil uil-youtube"></i></span>
+   </button>
+   <div class="step animate__animated animate__fadeInDown animation-9">
+     <span>Paso <b>3</b></span>
+   </div>
+ </div>
 </div>
 
 <div #asComments class="wrapper-comments ">
@@ -27,7 +37,7 @@
   <div class="in-wrapper-video-player">
     <div class="close pointer" (click)="move(false);closeVideo()">Cerrar <i class="uil uil-times"></i></div>
     <youtube-player (stateChange)="test($event)" (ready)="setPlayer($event)" [playerVars]="playerVars"
-                    [className]="'video-player'" videoId="xrRP4myIvR0"></youtube-player>
+                    [className]="'video-player'" videoId="ZP-5TZkFv_8"></youtube-player>
   </div>
 
   <div class="wrapper-fb" [ngClass]="{'d-flex':(steps.includes('STEP_2')), 'd-none':(!steps.includes('STEP_2'))}">
