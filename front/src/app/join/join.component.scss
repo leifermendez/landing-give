@@ -47,19 +47,6 @@
   transition: all ease 250ms;
 }
 
-.step {
-
-  font-size: .9rem;
-  padding: 0.35rem .5rem;
-  text-align: right;
-  color: #1a1a1a;
-
-  span {
-    font-weight: 600;
-    padding: .25rem;
-    background-color: white;
-  }
-}
 
 .social-btn {
   margin: 0 0.5rem;
@@ -124,6 +111,14 @@
   width: 10rem;
 }
 
+.avatar-mock-btn {
+  background-image: url("https://media4.giphy.com/media/rOSsuYA9Yj49iYBkj5/200.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 10rem;
+  width: 10rem;
+}
 
 .wrapper-video-player {
   position: fixed;

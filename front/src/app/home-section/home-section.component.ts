@@ -10,6 +10,9 @@ import Typewriter from 't-writer.js';
 export class HomeSectionComponent implements OnInit, AfterViewInit {
   @ViewChild('asHome') asHome: ElementRef;
   @ViewChild('asTitle') asTitle: ElementRef;
+  @ViewChild('asHideFaq1') asHideFaq1: ElementRef;
+  @ViewChild('asHideFaq2') asHideFaq2: ElementRef;
+  @ViewChild('asHideFaq3') asHideFaq3: ElementRef;
   showCase = false;
   menuSteps: Array<any> = []
 
@@ -20,6 +23,35 @@ export class HomeSectionComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.utilService.cbAction.subscribe(({a}) => {
       (a) ? this.initAnimate() : this.stopAnimate();
+    });
+
+    this.utilService.cbMoreInfo.subscribe(({a}) => {
+      this.utilService.scrollToTop()
+      if (a && a === 'SHOW_FAQ_1') {
+        this.initMove('asHideFaq1')
+        return
+      }
+      if (a && a === 'SHOW_FAQ_2') {
+        this.initMove('asHideFaq2')
+        return
+      }
+      if (a && a === 'SHOW_FAQ_3') {
+        this.initMove('asHideFaq3')
+        return
+      }
+      if (a && a === 'HIDE_FAQ_1') {
+        this.removeMove('asHideFaq1')
+        return
+      }
+      if (a && a === 'HIDE_FAQ_2') {
+        this.removeMove('asHideFaq2')
+        return
+      }
+      if (a && a === 'HIDE_FAQ_3') {
+        this.removeMove('asHideFaq3')
+        return
+      }
+
     });
 
     this.menuSteps = [
@@ -46,7 +78,11 @@ export class HomeSectionComponent implements OnInit, AfterViewInit {
   }
 
   move(a): void {
-    this.utilService.cbAction.emit({a})
+    this.utilService.cbAction.emit({a});
+  }
+
+  moreInfo(a): void {
+    this.utilService.cbMoreInfo.emit({a});
   }
 
   typeEffect(): void {
@@ -58,17 +94,27 @@ export class HomeSectionComponent implements OnInit, AfterViewInit {
     writer
       .changeCursorColor('white')
       .type('Dime tú <br>opinión')
-      .changeOps({ deleteSpeed: 80 })
-      .start()
+      .changeOps({deleteSpeed: 80})
+      .start();
   }
 
   initAnimate(): void {
-    this.renderer2.addClass(this.asHome.nativeElement, 'translate-top')
+    this.renderer2.addClass(this.asHome.nativeElement, 'translate-top');
+  }
+
+  initMove(section): void {
+    this.renderer2.addClass(this.asHome.nativeElement, 'translate-left');
+    this.renderer2.addClass(this[section].nativeElement, 'show-faq');
+  }
+
+  removeMove(section): void {
+    this.renderer2.removeClass(this.asHome.nativeElement, 'translate-left');
+    this.renderer2.removeClass(this[section].nativeElement, 'show-faq');
   }
 
   stopAnimate(): void {
-    this.renderer2.removeClass(this.asHome.nativeElement, 'translate-top')
+    this.renderer2.removeClass(this.asHome.nativeElement, 'translate-top');
   }
 
-  cbShowCase = () => this.showCase = !this.showCase
+  cbShowCase = () => this.showCase = !this.showCase;
 }

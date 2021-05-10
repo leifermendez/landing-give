@@ -90,6 +90,21 @@ body, head {
   }
 }
 
+.step {
+
+  font-size: .9rem;
+  padding: 0.35rem .5rem;
+  text-align: right;
+  color: #1a1a1a;
+
+  span {
+    font-weight: 600;
+    padding: .25rem;
+    background-color: white;
+  }
+}
+
+
 .video-player {
   position: relative;
   width: 100%;
@@ -265,6 +280,21 @@ p {
     iframe {
       width: 85%;
       height: 85%;
+    }
+  }
+
+  .step {
+
+    font-size: 0.9rem;
+    text-align: right;
+    color: #1a1a1a;
+    background: white;
+    margin: 0 .5rem 0 0;
+    padding: .25rem .5rem;
+
+    span {
+      font-weight: 600;
+      background-color: white;
     }
   }
 }

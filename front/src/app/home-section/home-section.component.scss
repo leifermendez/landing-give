@@ -7,31 +7,33 @@
   transition: all ease 250ms;
 }
 
-.avatar-square{
+.avatar-square {
   width: 300px;
   height: 300px;
   object-fit: cover;
 }
 
-.wrapper-title{
+.wrapper-title {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
   min-height: 12.5rem;
 }
 
-.btn-cta{
+.btn-cta {
   background-color: $textColor;
   margin: 1rem;
   padding: 1rem;
   color: $mainColor;
   font-size: 2rem;
-  .uil{
+
+  .uil {
     pointer-events: none;
   }
 }
 
-.avatar-mock{
+
+.avatar-mock {
   background-image: url("https://avatars.githubusercontent.com/u/15802366?v=4");
   background-size: cover;
   background-position: center;
@@ -47,10 +49,11 @@
   display: flex;
 }
 
-.gift-wrapper{
+.gift-wrapper {
   background-color: white;
   border-right: solid 2px #1a1a1a;
-  .gift{
+
+  .gift {
 
     /* text-align: center; */
     display: flex;
@@ -58,7 +61,8 @@
     align-items: center;
     align-content: center;
     padding: 1rem;
-    img{
+
+    img {
       width: 100px;
     }
 
@@ -66,24 +70,57 @@
 
 }
 
-.mobile-section{
+.translate-left {
+  transform: translateX(-95vw);
+}
+
+.mobile-section {
   display: none;
 }
 
+.hover-faq-section {
+  background-color: $mainColor;
+}
+
+.faq-section {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  height: 10rem;
+
+  &.show-faq {
+    opacity: 1;
+    transform: translateX(95vw);
+  }
+}
+
+.back-arrow{
+  margin: 1rem 0;
+  background-color: $textColor;
+  color: $mainColor;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
 
 @media screen and (max-width: 768px) {
-  .btn-cta{
+  .btn-cta {
     width: 100%;
     margin: 2rem 0;
   }
 
-  .mobile-section{
+  .mobile-section {
     justify-content: flex-start;
     width: 100%;
     display: flex;
     margin-bottom: 1rem;
 
-    .social-btn{
+    .social-btn {
       //background-color: red;
       width: 5rem;
       height: 5rem;
@@ -106,11 +143,13 @@
         background-color: #3769d0;
         color: $textColor;
       }
+
       &.fb-btn-second {
         background-color: #3769d0;
         color: $textColor;
       }
-      &.fb-btn-third{
+
+      &.fb-btn-third {
         background-color: #fd2e2e;
       }
     }
