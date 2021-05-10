@@ -35,11 +35,6 @@ export class JoinComponent implements OnInit {
         icon: '<i class="uil uil-facebook-f"></i>',
         label: 'Conectar Facebook',
         class: 'fb-btn btn-step-1'
-      },
-      {
-        icon: '<i class="uil uil-comments-alt"></i>',
-        label: 'Comentar Post',
-        class: 'fb-btn-second btn-step-2'
       }
     ]
 

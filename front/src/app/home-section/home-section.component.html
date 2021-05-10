@@ -13,11 +13,11 @@
 
     <div class="in-wrapper mobile-section col-12 col-xs-12 col-md-12 col-lg-6 ">
       <div *ngFor="let a of menuSteps;let i = index">
-        <button class="social-btn fb-btn {{a.class}}">
+        <button (click)="a?.cb()" class="social-btn fb-btn {{a.class}}">
           <span [innerHTML]="a.icon"></span>
         </button>
         <div class="step">
-          <span>Paso {{i+1}}</span>
+          <span>{{a.step}}</span>
         </div>
       </div>
 

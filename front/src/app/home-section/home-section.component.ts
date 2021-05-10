@@ -58,17 +58,15 @@ export class HomeSectionComponent implements OnInit, AfterViewInit {
       {
         icon: '<i class="uil uil-facebook-f"></i>',
         label: 'Conectar Facebook',
-        class: 'fb-btn btn-step-1'
-      },
-      {
-        icon: '<i class="uil uil-comments-alt"></i>',
-        label: 'Comentar Post',
-        class: 'fb-btn-second btn-step-2'
+        class: 'fb-btn btn-step-1',
+        step: 'Paso 1'
       },
       {
         icon: '<i class="uil uil-youtube"></i>',
         label: 'Comentar Post',
-        class: 'fb-btn-third btn-step-3'
+        class: 'fb-btn-third btn-step-3',
+        step: '+ info',
+        cb: () => this.move(true)
       }
     ]
   }
